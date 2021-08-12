@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "86919ee8-8877-4994-a368-0e4a6e54353b",
+		"name": "HW_2 ***",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Curr",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let skipTest = pm.response.code === 500;\r",
+							"\r",
+							"(skipTest ? pm.test.skip : pm.test)(\"RATE\", function (){\r",
+							"    console.log(pm.response.json());\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth_token",
+						"value": "/s34lfgbj/Vasily/jjd909/51888kjkWpqc1818123138113evny",
+						"type": "text"
+					},
+					{
+						"key": "curr_code",
+						"value": "{{Cur_ID}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "auth_token",
+							"value": "{{token}}",
+							"type": "text"
+						},
+						{
+							"key": "curr_code",
+							"value": "{{Cur_ID}}",
+							"type": "text"
+						},
+						{
+							"key": "curr_code",
+							"value": "468",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "curr_code",
+							"value": "123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}curr_byn",
+					"host": [
+						"{{url}}curr_byn"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
